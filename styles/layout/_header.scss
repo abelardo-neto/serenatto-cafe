@@ -1,5 +1,7 @@
 @use "../base/variables";
-@use '../utils/mixins';
+@use "../utils/mixins";
+@use "../utils/functions";
+
 
 .navbar {
   background-color: variables.$secondary-color;
@@ -99,7 +101,8 @@
   // transition: transform variables.$transition-duration ease-in-out;
   @include mixins.transition(transform);
   padding: 2rem;
-  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2); 
+  // box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2); 
+  box-shadow: functions.custom-box-shadow(0.625rem, rgba(0, 0, 0, 0.2)); 
   z-index: 1000;
 
   &.open {
@@ -189,7 +192,7 @@ body.sidebar-open .navbar-brand img {
       background-color: variables.$secondary-color;
     }
   }
-  
+
   .toggle-text {
     margin-left: 3.75rem; 
     white-space: nowrap;

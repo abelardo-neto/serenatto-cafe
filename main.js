@@ -52,11 +52,12 @@ document.addEventListener('DOMContentLoaded', function () {
   const toggler = document.querySelector('.navbar-toggler');
   const sidebar = document.querySelector('.sidebar');
   const closeSidebarButton = document.querySelector('.sidebar-close');
+
   toggler.addEventListener('click', function () {
     sidebar.classList.toggle('open');
     document.body.classList.toggle('sidebar-open');
   });
-  
+
   closeSidebarButton.addEventListener('click', function () {
     sidebar.classList.remove('open');
     document.body.classList.remove('sidebar-open');
