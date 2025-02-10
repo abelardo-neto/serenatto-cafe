@@ -15,16 +15,19 @@
 
   &.banner-1 {
     background-image: url('../../assets/banner-1.png');
+    
     .banner-content-container {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
     }
+    
     h2 {
       color: variables.$heading-color;
       font-weight: 400;
       text-align: left;
       margin: 2rem 0;
     }
+    
     p {
       font-size: 1.25rem;
       text-align: left;
@@ -32,6 +35,7 @@
       line-height: 1.6;
     }
   }
+  
   &.banner-2 {
     background-image: url('../../assets/banner-2.png');
     min-height: 25rem;
@@ -40,6 +44,7 @@
     // align-items: center;
     // justify-content: center;
     @include mixins.flexbox($direction: column);
+    
     h2 {
       color: variables.$heading-color;
       font-weight: 400;
@@ -47,6 +52,7 @@
       margin: 2rem 0;
       font-size: 4rem;
     }
+    
     p {
       font-size: 1.5rem;
       font-weight: 400;
@@ -56,9 +62,11 @@
     }
   }
 }
+
 .banner-content {
   grid-column: 2 / 4;
   align-content: start;
+  
   h2 {
     color: variables.$heading-color;
     font-weight: 400;
@@ -70,6 +78,7 @@
       font-weight: 600;
     }
   }
+  
   p {
     font-size: 1.25rem;
     text-align: left;
@@ -77,11 +86,14 @@
     line-height: 1.6;
   }
 }
+
 .banner-3 {
   max-width: 100%;
 }
+
 .services {
   padding: 6rem 0;
+  
   h2 {
     text-align: center;
     margin-bottom: 2rem;
@@ -89,6 +101,7 @@
     font-size: 2.5rem;
     font-weight: 600;
   }
+  
   .services-container {
     display: flex;
     justify-content: center;
@@ -99,14 +112,17 @@
     padding: 0 5rem;
   }
 }
+
 .products {
   padding: 2rem;
+  
   h2 {
     font-size: 2.5rem;
     color: variables.$subheading-color;
     text-align: center;
     margin: 4rem auto;
   }
+  
   .products-container {
     gap: 4rem;
     display: grid;

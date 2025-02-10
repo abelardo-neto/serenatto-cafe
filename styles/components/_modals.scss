@@ -1,5 +1,6 @@
 @use '../base/variables';
 @use "../utils/mixins";
+
 .modal {
   display: none;
   position: fixed;
@@ -15,6 +16,7 @@
   max-width: 50rem;
   max-height: 90vh;
   padding: variables.$padding-regular;
+
   &.open {
     display: block;
   }
@@ -30,6 +32,7 @@
       border-bottom: 1px solid variables.$modal-border-color;
       padding-bottom: 0.5rem;
       margin-bottom: variables.$margin-bottom-regular;
+
       .close-button {
         background: none;
         border: none;
@@ -37,13 +40,16 @@
         cursor: pointer;
         color: variables.$primary-color;
         @include mixins.transition(color);
+
         &:hover {
           color: variables.$accent-color;
         }
       }
     }
+
     .modal-body {
       @include mixins.flexbox($direction: column);
+      
       img {
         max-height: 20rem;
         width: 100%;
@@ -52,11 +58,13 @@
         align-self: center;
       }
     }
+    
     .modal-footer {
       @include mixins.flexbox();
       border-top: 1px solid variables.$modal-border-color;
       padding-top: 0.5rem;
       margin-top: 1rem;
+      
       .close-button {
         background-color: variables.$accent-color;
         border: 1px solid variables.$accent-color;
@@ -66,6 +74,7 @@
         border-radius: 0.25rem;
         cursor: pointer;
         @include mixins.transition(background-color, color);
+        
         &:hover {
           background-color: variables.$accent-color;
           color: variables.$modal-bg;
@@ -74,6 +83,7 @@
     }
   }
 }
+
 .modal-backdrop {
   display: none;
   position: fixed;
@@ -84,6 +94,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
+
 .modal.open ~ .modal-backdrop {
   display: block;
 }
