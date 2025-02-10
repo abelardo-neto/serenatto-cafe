@@ -23,6 +23,7 @@
     background-color: color.adjust(variables.$accent-color, $lightness: -10%);
     border-color: color.adjust(variables.$accent-color, $lightness: -10%);
   }
+  
   &:focus {
     outline: none;
     box-shadow: 0 0 0 0.2rem rgba(variables.$primary-color, 0.5);
